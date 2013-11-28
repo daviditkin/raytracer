@@ -1,0 +1,1734 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inters",
+				"intersection"
+			],
+			[
+				"sin",
+				"sinT"
+			],
+			[
+				"inter",
+				"intersection_matrix"
+			],
+			[
+				"ob",
+				"obj_ind"
+			],
+			[
+				"def",
+				"def	#ifndef … #define … #endif"
+			],
+			[
+				"sam",
+				"sampling_rate"
+			],
+			[
+				"plot",
+				"plot_filename"
+			],
+			[
+				"COUT",
+				"COUNTER=0"
+			],
+			[
+				"train",
+				"train_plot_data"
+			],
+			[
+				"gnupl",
+				"gnuplot_input_file"
+			],
+			[
+				"get",
+				"get_training_algorithm"
+			],
+			[
+				"acti",
+				"hidden_activation"
+			],
+			[
+				"out",
+				"output_activation"
+			],
+			[
+				"hidde",
+				"hidden_activation"
+			],
+			[
+				"learnin",
+				"learning_momentum"
+			],
+			[
+				"yl",
+				"ylabelBF"
+			],
+			[
+				"yla",
+				"ylabelMSE"
+			],
+			[
+				"cm",
+				"cmdPlotBitFail"
+			],
+			[
+				"cmd",
+				"cmdPlotMSE"
+			],
+			[
+				"len",
+				"lenMSE"
+			],
+			[
+				"cmdl",
+				"cmdPlotBitFail"
+			],
+			[
+				"cmdp",
+				"cmdPlotBitFail"
+			],
+			[
+				"lne",
+				"lenMSE"
+			],
+			[
+				"outname",
+				"outnameBitFail"
+			],
+			[
+				"fann_get",
+				"fann_get_bit_fail"
+			],
+			[
+				"gplo",
+				"gnuplot_input_file"
+			],
+			[
+				"subse",
+				"subsection{title}	latex-document"
+			],
+			[
+				"sect",
+				"section{title}	latex-document"
+			],
+			[
+				"gnu",
+				"gnuplot_input_file"
+			],
+			[
+				"confi",
+				"config"
+			],
+			[
+				"end",
+				"end{itemize}	MNIST_report.tex"
+			],
+			[
+				"num_",
+				"num_output"
+			],
+			[
+				"pritn",
+				"printf	printf …"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"neu",
+				"hidden_layer_neurons"
+			],
+			[
+				"hid",
+				"hidden_layers"
+			],
+			[
+				"gnup",
+				"gnuplot_input_file"
+			],
+			[
+				"conf",
+				"config"
+			],
+			[
+				"print",
+				"printf	printf …"
+			],
+			[
+				"gnul",
+				"gnuplot_input_file"
+			],
+			[
+				"g",
+				"gnuplot_path"
+			],
+			[
+				"test",
+				"test_file"
+			],
+			[
+				"num",
+				"num_layers"
+			],
+			[
+				"epoch",
+				"epochs_between_reports"
+			],
+			[
+				"epo",
+				"epochs_between_reports"
+			],
+			[
+				"fie",
+				"filename"
+			],
+			[
+				"mi",
+				"mnistNN"
+			],
+			[
+				"mni",
+				"mnistNN"
+			],
+			[
+				"numou",
+				"num_output"
+			],
+			[
+				"trai",
+				"train_data"
+			],
+			[
+				"numin",
+				"num_input"
+			],
+			[
+				"tra",
+				"train_data"
+			],
+			[
+				"pri",
+				"primitives"
+			],
+			[
+				"no",
+				"normalize"
+			],
+			[
+				"colo",
+				"colonyDutyLocation"
+			],
+			[
+				"Reader",
+				"Reader::Reader"
+			],
+			[
+				"size",
+				"size();i"
+			],
+			[
+				"sca",
+				"scanline"
+			],
+			[
+				"ed",
+				"edges"
+			],
+			[
+				"tmpo",
+				"tmpPoly"
+			],
+			[
+				"surfac",
+				"surfaces"
+			],
+			[
+				"po",
+				"point"
+			],
+			[
+				"Ligh",
+				"LightIntensity"
+			],
+			[
+				"Ob",
+				"Object"
+			],
+			[
+				"tmp",
+				"tmpEdge"
+			],
+			[
+				"curr",
+				"currPtr"
+			],
+			[
+				"Pol",
+				"Polygon"
+			],
+			[
+				"Vert",
+				"Vertices  (element)"
+			],
+			[
+				"Polyg",
+				"Polygons"
+			],
+			[
+				"PL",
+				"PLS_POS"
+			],
+			[
+				"amb",
+				"ambientLight"
+			],
+			[
+				"am",
+				"ambientLight"
+			],
+			[
+				"Light",
+				"LightSource"
+			],
+			[
+				"Lig",
+				"LightIntensity"
+			],
+			[
+				"newl",
+				"newline	latex-document"
+			],
+			[
+				"em",
+				"emph{text}	latex-document"
+			],
+			[
+				"togg",
+				"toggle_shading"
+			],
+			[
+				"dra",
+				"draw_filled"
+			],
+			[
+				"Poly",
+				"polygons"
+			],
+			[
+				"door",
+				"doorKnob"
+			],
+			[
+				"pol",
+				"polygons"
+			],
+			[
+				"prin",
+				"printDatabase"
+			],
+			[
+				"sphe",
+				"sphere"
+			],
+			[
+				"CU",
+				"CUSTOM_AXIS_P2"
+			],
+			[
+				"SPH",
+				"SPHERE"
+			],
+			[
+				"tmpe",
+				"tmpEdge"
+			],
+			[
+				"WIRE",
+				"WIREFRAME"
+			],
+			[
+				"Sp",
+				"SPHERE"
+			],
+			[
+				"C",
+				"CYLINDER"
+			],
+			[
+				"Draw",
+				"DrawUtils"
+			],
+			[
+				"draw",
+				"draw"
+			],
+			[
+				"app",
+				"apply_matrix"
+			],
+			[
+				"edge",
+				"edgeList"
+			],
+			[
+				"appl",
+				"apply_nPer"
+			],
+			[
+				"do",
+				"do_clipping"
+			],
+			[
+				"Po",
+				"Polygon"
+			],
+			[
+				"object",
+				"objectId"
+			],
+			[
+				"id",
+				"id=  (attribute)"
+			],
+			[
+				"real",
+				"relation2"
+			],
+			[
+				"obje",
+				"objectId"
+			],
+			[
+				"ste",
+				"strength"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"opt",
+				"option	Tag"
+			],
+			[
+				"class",
+				"class=  (attribute)"
+			],
+			[
+				"Phon",
+				"PhoneListCtrl"
+			],
+			[
+				"zoom",
+				"zoomLev"
+			],
+			[
+				"clip",
+				"clipEdge"
+			],
+			[
+				"geted",
+				"getEdgeCount"
+			],
+			[
+				"cyl",
+				"cylinderPoints"
+			],
+			[
+				"face",
+				"faceCount"
+			],
+			[
+				"zm",
+				"zMin"
+			],
+			[
+				"pers",
+				"perspective_to_parallel"
+			],
+			[
+				"crea",
+				"create_sphere"
+			],
+			[
+				"cy",
+				"cylinderPoints"
+			],
+			[
+				"create",
+				"create_cylinder"
+			],
+			[
+				"togl",
+				"toggle_camera"
+			],
+			[
+				"Custom",
+				"CustomAxis"
+			],
+			[
+				"GL_LINE",
+				"GL_LINE_LOOP"
+			],
+			[
+				"point",
+				"Point"
+			],
+			[
+				"poi",
+				"Point"
+			],
+			[
+				"faces",
+				"faces"
+			],
+			[
+				"getface",
+				"getFaceList"
+			],
+			[
+				"getno",
+				"getNodeCount"
+			],
+			[
+				"getV",
+				"getVolume"
+			],
+			[
+				"orig",
+				"origPRP"
+			],
+			[
+				"view",
+				"viewrc"
+			],
+			[
+				"fac",
+				"faceList"
+			],
+			[
+				"getFace",
+				"getFaceCount"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Scene.h",
+			"settings":
+			{
+				"buffer_size": 351,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Transformation.h",
+			"settings":
+			{
+				"buffer_size": 4832,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Scene.cpp",
+			"settings":
+			{
+				"buffer_size": 1458,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Main.cpp",
+			"settings":
+			{
+				"buffer_size": 3467,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Sphere.cpp",
+			"settings":
+			{
+				"buffer_size": 371,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/PDFLaTeX.sublime-build",
+	"command_palette":
+	{
+		"height": 217.0,
+		"selected_items":
+		[
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 141.0,
+		"history":
+		[
+			"clear",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"ls",
+			"clear",
+			"cat"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/sergio/CG/RayTracing/Object.h",
+		"/home/sergio/CG/RayTracing/Sphere.h",
+		"/home/sergio/CG/RayTracing/Makefile",
+		"/home/sergio/CG/RayTracing/Matrix.h",
+		"/home/sergio/CG/RayTracing/Point.h",
+		"/home/sergio/CG/RayTracing/Ray.h",
+		"/home/sergio/CG/RayTracing/Matrix.cpp",
+		"/home/sergio/CG/RayTracing/Main.cpp",
+		"/home/sergio/CG/RayTracing/Vector.cpp",
+		"/home/sergio/CG/RayTracing/Material.h",
+		"/home/sergio/CG/Project-3/Point.h",
+		"/home/sergio/CG/RayTracing/Vector.h",
+		"/home/sergio/CG/Project-3/Vector.cpp",
+		"/home/sergio/CG/Project-3/Vector.h",
+		"/home/sergio/CG/Project-3/Matrix.cpp",
+		"/home/sergio/CG/Project-3/Matrix.h",
+		"/home/sergio/CG/Project-3/Scene.cpp",
+		"/home/sergio/CG/RayTracing/Light.h",
+		"/home/sergio/CG/RayTracing/Intensity.h",
+		"/home/sergio/CG/Project-3/main.cpp",
+		"/home/sergio/CG/Project-3/DataStructures.cpp",
+		"/home/sergio/CG/RayTracing/DataStructures.h",
+		"/home/sergio/CG/Project-3/DataStructures.h",
+		"/home/sergio/CG/RayTracing/Intersection.h",
+		"/home/sergio/CG/RayTracing/Coefficient.h",
+		"/home/sergio/CG/Project-3/Makefile",
+		"/home/sergio/CG/RayTracing/RT.sublime-project",
+		"/home/sergio/Android/Workspace/AI-HW3-Spinatelli/resources/edu/uic/ai/homework3/data/pima-indians-diabetes.csv",
+		"/home/sergio/NN/NN/config/mnist4.cfg",
+		"/home/sergio/NN/NN/config/mnist5.cfg",
+		"/home/sergio/NN/NN/config/mnist3.cfg",
+		"/home/sergio/NN/NN/config/mnist1.cfg",
+		"/home/sergio/NN/NN/config/mnist2.cfg",
+		"/home/sergio/NN/NN/dataset_converter.py",
+		"/home/sergio/NN/NN/test.sh",
+		"/home/sergio/NN/NN/train.sh",
+		"/home/sergio/NN/NN/src/util.c",
+		"/home/sergio/NN/mushroom.c",
+		"/home/sergio/NN/CS514-nn-Gonzaga/nnmain/test.sh",
+		"/home/sergio/NN/CS514-nn-Gonzaga/nnmain/train.sh",
+		"/home/sergio/NN/NN/plots/test_plot_data/test_plot_data.gplot",
+		"/home/sergio/NN/NN/mnist3.cfg",
+		"/home/sergio/NN/NN/mnist4.cfg",
+		"/home/sergio/NN/NN/mnist5.cfg",
+		"/home/sergio/NN/NN/mnist2.cfg",
+		"/home/sergio/NN/NN/Makefile",
+		"/home/sergio/NN/NN/src/nnmain.c",
+		"/home/sergio/NN/NN/config/mnist.cfg",
+		"/home/sergio/NN/NN/src/mnistNN.c",
+		"/home/sergio/NN/NN/MNIST_report.tex",
+		"/home/sergio/NN/NN/mnist_test.gplot",
+		"/home/sergio/NN/NN/mnist_test.gplot~",
+		"/home/sergio/NN/NN/mnist.cfg",
+		"/home/sergio/NN/NN/mnistNN.c",
+		"/home/sergio/AI-HW1/AI-HW2.tex",
+		"/home/sergio/NN/NN/mnist.gplot",
+		"/home/sergio/NN/NN/mushroom_float.net",
+		"/home/sergio/CG/Project-3/Scene.h",
+		"/home/sergio/CG/Project-3/Ray.h",
+		"/home/sergio/CG/Project-3/Primitives.h",
+		"/home/sergio/CG/Project-3/Transformation.h",
+		"/home/sergio/.config/sublime-text-3/Packages/Anaconda/README.md",
+		"/home/sergio/CG/Project-3/out.txt",
+		"/home/sergio/CG/Project-3/PrimitivesBK.cpp",
+		"/home/sergio/CG/Project-3/project3",
+		"/home/sergio/CG/ray/scene.h",
+		"/home/sergio/CG/ray/raytracer.h",
+		"/home/sergio/CG/ray/raytracer.cpp",
+		"/home/sergio/CG/ray/common.h",
+		"/home/sergio/CG/ray/scene.cpp",
+		"/home/sergio/CG/ray/testapp.cpp",
+		"/home/sergio/CG/ray/surface.cpp",
+		"/home/sergio/CG/ray/surface.h",
+		"/home/sergio/Android/Antscillary-sketches/CS523Project/cs523proj/Ant.java",
+		"/home/sergio/Android/Antscillary-sketches/CS523Project/cs523proj/ProcessingMain.java",
+		"/home/sergio/Android/Antscillary-sketches/CS523Project/cs523proj/FoodSpot.java",
+		"/home/sergio/Android/Antscillary-sketches/CS523Project/cs523proj/Colony.java",
+		"/home/sergio/Android/Antscillary-sketches/CS523Project/cs523proj/Circle.java",
+		"/home/sergio/CG/cg-project1/Project-3/Project-3.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Reader.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Reader.h",
+		"/home/sergio/CG/cg-project1/Project-3/Edge.h",
+		"/home/sergio/CG/cg-project1/Project-3/Object.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Polygon.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Vertex.h",
+		"/home/sergio/CG/cg-project1/Project-3/Object.h",
+		"/home/sergio/CG/cg-project1/Project-3/Polygon.h",
+		"/home/sergio/CG/cg-project1/Project-3/project3.xml",
+		"/home/sergio/DecisionTree/VotesDecisionTree.tex",
+		"/home/sergio/CG/cg-project1/Project-3/DrawUtils.h",
+		"/home/sergio/CG/cg-project1/Project-3/DataStructures.h",
+		"/home/sergio/CG/cg-project1/Project-3/DrawUtils.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Transformation.h",
+		"/home/sergio/CG/cg-project1/Project-3/Vector.h",
+		"/home/sergio/CG/cg-project1/Project-3/Edge.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Makefile",
+		"/home/sergio/CG/cg-project1/Project-3/Surface.h",
+		"/home/sergio/CG/cg-project1/Project-3/FunzioniACaso.cpp",
+		"/home/sergio/DecisionTree/GlassDecisionTree.tex",
+		"/home/sergio/Downloads/weka-3-6-10/data/vote.arff",
+		"/home/sergio/CG/cg-project1/Project-3/Point.h",
+		"/home/sergio/CG/cg-project1/Project-3/bk/Utils.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/bk/Project-1.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/testmain.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/bk/Reader.cpp",
+		"/home/sergio/CG/cg-project1/Project-3/Project3.sublime-project",
+		"/home/sergio/CG/cg-project1/Project-3/Utils.cpp",
+		"/home/sergio/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/home/sergio/CG/cg-project1/Project-3/Project-3bk.cpp",
+		"/home/sergio/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/sergio/CG/cg-project1/Project-3/Project-1.cpp",
+		"/home/sergio/Hackathon/groupup/GroupMyApp/public/realIndex.html",
+		"/home/sergio/Hackathon/groupup/GroupMyApp/public/plugins/shopping/css/style.css",
+		"/home/sergio/Hackathon/groupup/GroupMyApp/public/plugins/shopping/shopping.html",
+		"/home/sergio/Hackathon/groupup/GroupMyApp/public/index.html",
+		"/home/sergio/Hackathon/parse-js-blank/index.html",
+		"/home/sergio/Hackathon/groupup/plugins/shopping/css/style.css",
+		"/home/sergio/Hackathon/groupup/plugins/shopping/shopping.html",
+		"/home/sergio/Hackathon/groupup/index.html",
+		"/home/sergio/Hackathon/groupup/css/bootstrap.css",
+		"/home/sergio/Hackathon/groupup/plugins/test.html",
+		"/home/sergio/Hackathon/groupup/test.html",
+		"/home/sergio/Hackathon/AnyYolk/index.html",
+		"/home/sergio/Hackathon/Test/cloud/views/hello.jade",
+		"/home/sergio/Hackathon/Test/cloud/app.js",
+		"/home/sergio/Hackathon/Test/cloud/views/hello.ejs",
+		"/home/sergio/Angular/angular-phonecat/app/index.html",
+		"/home/sergio/Angular/angular-phonecat/app/js/controllers.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/home/sergio/Dropbox/CG Lab/cg-project1/Project-2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"};\n",
+			"float",
+			"np.",
+			"np",
+			"input_fi",
+			"CF",
+			"     ",
+			"#Epochs MSE",
+			"command2",
+			"command1",
+			";",
+			"char *",
+			"=",
+			"gnupl",
+			"normal",
+			";\n",
+			"scene.",
+			"->",
+			"Color",
+			"radius",
+			"cout",
+			"    ",
+			"zbuf",
+			"v2",
+			"v1",
+			"push_",
+			"Edge",
+			"push_",
+			"parseLig",
+			"parseCol",
+			"parseConst",
+			"parseCon",
+			"objects.",
+			"edges",
+			"objects.",
+			"Color",
+			"polygons",
+			"Polygon",
+			"polys",
+			"polygons",
+			"p2.",
+			"p1.",
+			"(p2->point)",
+			"(p1->point)",
+			"Const",
+			"parsePolygons",
+			"p2->point",
+			"p1->point",
+			"p1",
+			"p2->point->",
+			"p1->point->",
+			"p2",
+			"p1",
+			"perspective_matrix",
+			"11",
+			"1",
+			"11",
+			"CUSTOM_AXIS_P1",
+			"ligth",
+			"Vertex",
+			"fill",
+			"fill_",
+			"WIREFRAME",
+			"Wireframe",
+			"print",
+			"printf",
+			"malloc",
+			"Nper",
+			"			<NumPoints>4</NumPoints>",
+			"parsePoints",
+			"tmpPoly",
+			"polygons",
+			"VPN",
+			"parseP",
+			"apply_matrix_and_unhomogenize",
+			"apply_matrix_and_normalize",
+			"apply_matrix",
+			"apply_matrix_and_normalize",
+			"apply_matrix",
+			"sph",
+			"create_cylinder",
+			"FALSE",
+			"TRUE",
+			"Vertex",
+			"hidden",
+			"list-group",
+			"list",
+			"css/",
+			".active",
+			".navb",
+			".nav",
+			"float",
+			"sidebar-nav",
+			"underline",
+			"nav-list .active",
+			"active",
+			"Link",
+			"../assets/",
+			"bigvee",
+			"bigwedge",
+			"\"",
+			"latexm",
+			"latex",
+			"build",
+			"origPRP",
+			"(toVP * mPer)",
+			"cylinderPoints",
+			"circlePoints",
+			"cylinderPoints",
+			"create_cy",
+			"zoom",
+			"do_cl",
+			"color",
+			"0/",
+			"/",
+			"create_doo",
+			"edges",
+			"edgesList",
+			"edges",
+			"edgeList",
+			"edges",
+			"edgesList",
+			"edgeList",
+			"point2",
+			"point1",
+			"create_",
+			"Connect",
+			"connectivity"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"double",
+			" ",
+			"",
+			"cmdPlotBitFail",
+			"cmdPlotMSE",
+			"",
+			" = ",
+			"scene->",
+			".",
+			"	",
+			"v2.point",
+			"v1.point",
+			"objects->",
+			"objects",
+			"Object",
+			"objs",
+			"objects",
+			"p2->",
+			"p1->",
+			"p2",
+			"p1",
+			"(p2->point)",
+			"(p1->point)",
+			"p2->point.",
+			"p1->point.",
+			"p2->point",
+			"p1->point",
+			"Point",
+			"POLYGONS",
+			"Polygons",
+			"",
+			"parsePoint",
+			"polys",
+			"apply_matrix",
+			"apply_matrix_and_unhomogenize",
+			"apply_matrix_and_normalize",
+			"Point",
+			"../css/",
+			"Group",
+			"",
+			"vee",
+			"wedge",
+			"",
+			"toVP",
+			"circlePoints",
+			"edgeList",
+			"edgesList",
+			"edgeList",
+			"edges",
+			"edgesList",
+			"p2",
+			"p1",
+			"point2",
+			"point1",
+			"getEdges",
+			"edges",
+			"Edge",
+			"cylinderPoints",
+			"sPhere",
+			"",
+			"cy",
+			"cylinder",
+			"",
+			"} el",
+			"}",
+			"((",
+			" (",
+			"(",
+			"Point",
+			"Point4D",
+			"	",
+			"\\t",
+			"nodes",
+			"CanonicalVolume",
+			"Matrix",
+			"Point",
+			"Matrix",
+			"cosTheta",
+			"sinTheta",
+			"Vector",
+			"Point",
+			"Matrix",
+			"",
+			"Canonical",
+			"CanonicalVolume",
+			"mat",
+			"double",
+			"ret",
+			"4DVector",
+			"Vector4D",
+			"Matrix4D",
+			"4DMatrix"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Scene.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Transformation.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 467.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Scene.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1231,
+								1231
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1152,
+								1152
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Sphere.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 371,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 140.0
+	},
+	"project": "RT.sublime-project",
+	"replace":
+	{
+		"height": 100.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 132.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
