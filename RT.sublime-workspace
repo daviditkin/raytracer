@@ -4,20 +4,88 @@
 		"selected_items":
 		[
 			[
+				"nor",
+				"normalize"
+			],
+			[
+				"norma",
+				"normalize"
+			],
+			[
+				"ob",
+				"obj"
+			],
+			[
+				"I",
+				"Intensity"
+			],
+			[
+				"calc",
+				"calculate_bounds"
+			],
+			[
+				"cotu",
+				"cout<<\"int"
+			],
+			[
+				"normal",
+				"normal_in"
+			],
+			[
+				"vec",
+				"vector"
+			],
+			[
+				"init",
+				"init_scene"
+			],
+			[
+				"obje",
+				"obj_index"
+			],
+			[
+				"norm",
+				"normalize"
+			],
+			[
+				"cosa",
+				"cosAlpha"
+			],
+			[
+				"obj",
+				"obj_index"
+			],
+			[
+				"shad",
+				"shadow"
+			],
+			[
+				"inter",
+				"intersection"
+			],
+			[
+				"sahd",
+				"shadow_factor"
+			],
+			[
+				"dir",
+				"direction"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"inte",
+				"intensity"
+			],
+			[
 				"inters",
 				"intersection"
 			],
 			[
 				"sin",
 				"sinT"
-			],
-			[
-				"inter",
-				"intersection_matrix"
-			],
-			[
-				"ob",
-				"obj_ind"
 			],
 			[
 				"def",
@@ -400,10 +468,6 @@
 				"relation2"
 			],
 			[
-				"obje",
-				"objectId"
-			],
-			[
 				"ste",
 				"strength"
 			],
@@ -450,70 +514,6 @@
 			[
 				"pers",
 				"perspective_to_parallel"
-			],
-			[
-				"crea",
-				"create_sphere"
-			],
-			[
-				"cy",
-				"cylinderPoints"
-			],
-			[
-				"create",
-				"create_cylinder"
-			],
-			[
-				"togl",
-				"toggle_camera"
-			],
-			[
-				"Custom",
-				"CustomAxis"
-			],
-			[
-				"GL_LINE",
-				"GL_LINE_LOOP"
-			],
-			[
-				"point",
-				"Point"
-			],
-			[
-				"poi",
-				"Point"
-			],
-			[
-				"faces",
-				"faces"
-			],
-			[
-				"getface",
-				"getFaceList"
-			],
-			[
-				"getno",
-				"getNodeCount"
-			],
-			[
-				"getV",
-				"getVolume"
-			],
-			[
-				"orig",
-				"origPRP"
-			],
-			[
-				"view",
-				"viewrc"
-			],
-			[
-				"fac",
-				"faceList"
-			],
-			[
-				"getFace",
-				"getFaceCount"
 			]
 		]
 	},
@@ -523,15 +523,7 @@
 			"file": "Scene.h",
 			"settings":
 			{
-				"buffer_size": 351,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Transformation.h",
-			"settings":
-			{
-				"buffer_size": 4832,
+				"buffer_size": 657,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +531,7 @@
 			"file": "Scene.cpp",
 			"settings":
 			{
-				"buffer_size": 1458,
+				"buffer_size": 2471,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +539,7 @@
 			"file": "Main.cpp",
 			"settings":
 			{
-				"buffer_size": 3467,
+				"buffer_size": 5635,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +547,23 @@
 			"file": "Sphere.cpp",
 			"settings":
 			{
-				"buffer_size": 371,
+				"buffer_size": 1140,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/sergio/CG/Project-3/Scene.cpp",
+			"settings":
+			{
+				"buffer_size": 3668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/sergio/CG/Project-3/main.cpp",
+			"settings":
+			{
+				"buffer_size": 6084,
 				"line_ending": "Unix"
 			}
 		}
@@ -608,31 +616,40 @@
 	},
 	"file_history":
 	[
-		"/home/sergio/CG/RayTracing/Object.h",
+		"/home/sergio/CG/Project-3/Primitives.cpp",
+		"/home/sergio/CG/RayTracing/Sphere.cpp",
+		"/home/sergio/CG/Project-3/Scene.cpp",
+		"/home/sergio/CG/RayTracing/Rect.cpp",
 		"/home/sergio/CG/RayTracing/Sphere.h",
-		"/home/sergio/CG/RayTracing/Makefile",
-		"/home/sergio/CG/RayTracing/Matrix.h",
-		"/home/sergio/CG/RayTracing/Point.h",
-		"/home/sergio/CG/RayTracing/Ray.h",
-		"/home/sergio/CG/RayTracing/Matrix.cpp",
 		"/home/sergio/CG/RayTracing/Main.cpp",
+		"/home/sergio/CG/RayTracing/Rect.h",
+		"/home/sergio/CG/RayTracing/Makefile",
+		"/home/sergio/CG/Project-3/Primitives.h",
+		"/home/sergio/CG/Project-3/main.cpp",
+		"/home/sergio/CG/RayTracing/Ray.h",
+		"/home/sergio/CG/RayTracing/Object.h",
+		"/home/sergio/CG/RayTracing/Coefficient.h",
+		"/home/sergio/CG/RayTracing/Intensity.cpp",
+		"/home/sergio/CG/RayTracing/Intensity.h",
+		"/home/sergio/CG/RayTracing/Light.cpp",
+		"/home/sergio/CG/RayTracing/Light.h",
+		"/home/sergio/CG/RayTracing/Coefficient.cpp",
+		"/home/sergio/CG/RayTracing/Point.h",
+		"/home/sergio/CG/RayTracing/Vector.h",
+		"/home/sergio/CG/RayTracing/Transformation.h",
+		"/home/sergio/CG/Project-3/Point.h",
+		"/home/sergio/CG/RayTracing/Matrix.h",
+		"/home/sergio/CG/RayTracing/Matrix.cpp",
 		"/home/sergio/CG/RayTracing/Vector.cpp",
 		"/home/sergio/CG/RayTracing/Material.h",
-		"/home/sergio/CG/Project-3/Point.h",
-		"/home/sergio/CG/RayTracing/Vector.h",
 		"/home/sergio/CG/Project-3/Vector.cpp",
 		"/home/sergio/CG/Project-3/Vector.h",
 		"/home/sergio/CG/Project-3/Matrix.cpp",
 		"/home/sergio/CG/Project-3/Matrix.h",
-		"/home/sergio/CG/Project-3/Scene.cpp",
-		"/home/sergio/CG/RayTracing/Light.h",
-		"/home/sergio/CG/RayTracing/Intensity.h",
-		"/home/sergio/CG/Project-3/main.cpp",
 		"/home/sergio/CG/Project-3/DataStructures.cpp",
 		"/home/sergio/CG/RayTracing/DataStructures.h",
 		"/home/sergio/CG/Project-3/DataStructures.h",
 		"/home/sergio/CG/RayTracing/Intersection.h",
-		"/home/sergio/CG/RayTracing/Coefficient.h",
 		"/home/sergio/CG/Project-3/Makefile",
 		"/home/sergio/CG/RayTracing/RT.sublime-project",
 		"/home/sergio/Android/Workspace/AI-HW3-Spinatelli/resources/edu/uic/ai/homework3/data/pima-indians-diabetes.csv",
@@ -667,7 +684,6 @@
 		"/home/sergio/NN/NN/mushroom_float.net",
 		"/home/sergio/CG/Project-3/Scene.h",
 		"/home/sergio/CG/Project-3/Ray.h",
-		"/home/sergio/CG/Project-3/Primitives.h",
 		"/home/sergio/CG/Project-3/Transformation.h",
 		"/home/sergio/.config/sublime-text-3/Packages/Anaconda/README.md",
 		"/home/sergio/CG/Project-3/out.txt",
@@ -727,15 +743,7 @@
 		"/home/sergio/Hackathon/groupup/plugins/shopping/css/style.css",
 		"/home/sergio/Hackathon/groupup/plugins/shopping/shopping.html",
 		"/home/sergio/Hackathon/groupup/index.html",
-		"/home/sergio/Hackathon/groupup/css/bootstrap.css",
-		"/home/sergio/Hackathon/groupup/plugins/test.html",
-		"/home/sergio/Hackathon/groupup/test.html",
-		"/home/sergio/Hackathon/AnyYolk/index.html",
-		"/home/sergio/Hackathon/Test/cloud/views/hello.jade",
-		"/home/sergio/Hackathon/Test/cloud/app.js",
-		"/home/sergio/Hackathon/Test/cloud/views/hello.ejs",
-		"/home/sergio/Angular/angular-phonecat/app/index.html",
-		"/home/sergio/Angular/angular-phonecat/app/js/controllers.js"
+		"/home/sergio/Hackathon/groupup/css/bootstrap.css"
 	],
 	"find":
 	{
@@ -991,7 +999,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1000,15 +1008,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 351,
+						"buffer_size": 657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								351,
-								351
+								599,
+								599
 							]
 						],
 						"settings":
@@ -1120,26 +1128,26 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Transformation.h",
+					"file": "Scene.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4832,
+						"buffer_size": 2471,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1135,
-								1135
+								1863,
+								1863
 							]
 						],
 						"settings":
@@ -1248,161 +1256,29 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 467.0,
+						"translation.y": 912.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "Scene.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1231,
-								1231
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "Main.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3467,
+						"buffer_size": 5635,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1152,
-								1152
+								5635,
+								5635
 							]
 						],
 						"settings":
@@ -1515,26 +1391,26 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 702.0,
+						"translation.y": 3871.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "Sphere.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 371,
+						"buffer_size": 1140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								62,
-								62
+								396,
+								396
 							]
 						],
 						"settings":
@@ -1643,10 +1519,67 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/sergio/CG/Project-3/Scene.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2903,
+								2903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1083.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/sergio/CG/Project-3/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5563,
+								5563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4102.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

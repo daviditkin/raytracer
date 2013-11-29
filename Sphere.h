@@ -9,7 +9,7 @@ class Sphere : public Object
 		double radius;
 		Sphere (const Point& c, double r) : center (c), radius (r) {}
 		Sphere (double x, double y, double z, double r) : center (Point (x, y, z)), radius (r) {}
-		bool intersect (double& t, Matrix& m);
+		bool intersect (const Ray& ray, double& t);
 		Vector normal_in (const Point& p);
 };
 

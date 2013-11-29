@@ -1,7 +1,5 @@
 #ifndef VECTOR_H
 #define VECTOR_H
-#include <ostream>
-using namespace std;
 #include "Point.h"
 
 class Vector

@@ -1,5 +1,8 @@
 #ifndef POINT_H
 #define POINT_H
+#include <exception>
+#include <ostream>
+using namespace std;
 
 // A custom exception, thrown when using a bad index
 // when accessing an element using M(i, j), or P[i] for points
