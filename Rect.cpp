@@ -12,18 +12,18 @@ bool Rect::intersect (const Ray& ray, double& t)
 	
 	double dist = - (A*ray.origin.x+B*ray.origin.y+C*ray.origin.z+D)/(A*ray.direction[0]+B*ray.direction[1]+C*ray.direction[2]);
 
-	if (dist < 0)
+	double epsilon = 0.00000001;
+	if (dist <= epsilon)
 		return false;
 
 	Point p;
 	p.x = ray.origin.x+dist*ray.direction[0];
 	p.y = ray.origin.y+dist*ray.direction[1];
 	p.z = ray.origin.z+dist*ray.direction[2];
-
-	double epsilon = 0.000001;
-	if (p.x > xMax+epsilon || p.x < xMin-epsilon || p.y > yMax+epsilon || 
-		p.y < yMin-epsilon || p.z > zMax+epsilon || p.z < zMin-epsilon)
+	if (p.x >= xMax+epsilon || p.x <= xMin-epsilon || p.y >= yMax+epsilon || 
+		p.y <= yMin-epsilon || p.z >= zMax+epsilon || p.z <= zMin-epsilon)
 		return false;
+
 	t = dist;
 	return true;
 }
@@ -37,6 +37,7 @@ void Rect::calculate_normal ()
 {
 	Vector v1 = points[1] - points[0];
 	Vector v2 = points[2] - points[1];
+	cout<<"v1 "<<v1<<" v2 "<<v2<<endl;
 
 	normal = (v2^v1);
 	normal.normalize ();

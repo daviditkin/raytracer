@@ -18,10 +18,13 @@
 
 #include <iostream>
 using namespace std;
+#include <string.h>
 #include "Scene.h"
 #include "Sphere.h"
-#include "Rect.h"
+#include "Floor.h"
 #include "DataStructures.h"
+#include "Cylinder.h"
+#include "Cone.h"
 
 VRC vrc;
 CanonicalVolume canVol;
@@ -29,6 +32,7 @@ Light l;
 Scene* scene;
 double stepx = 0;
 double stepy = 0;
+bool antialiasing = false;
 
 Intensity average (const Intensity& c1, const Intensity& c2, const Intensity& c3, const Intensity& c4)
 {
@@ -41,8 +45,8 @@ Intensity average (const Intensity& c1, const Intensity& c2, const Intensity& c3
 void init_scene (int MAX_DEPTH)
 {
 	scene = new Scene (MAX_DEPTH, vrc.prp);
-	scene->set_ambient (Intensity (1.0, 1.0, 1.0));
-	scene->set_pls (Point (0, 40, 5), Intensity (1.0, 1.0, 1.0));
+	scene->set_ambient (Intensity (0.5,0.5,0.5));//(1.0, 1.0, 1.0));
+	scene->set_pls (Point (0, 29, 5), Intensity (0.7,0.7,0.7));
 
 	Sphere* s1 = new Sphere (-15.0, 0, -40.0, 20.0);
 	s1->material.kA.set (0.231, 0.231, 0.231);
@@ -50,7 +54,8 @@ void init_scene (int MAX_DEPTH)
 	s1->material.kS.set (0.774, 0.774, 0.774);
 	s1->material.kT.set (0.0, 0.0, 0.0);
 	s1->material.n = 89.6;
-	s1->material.kR = 0;
+	s1->material.kR = 0.0;
+
 	scene->objects.push_back (s1);
 
 	Sphere* s2 = new Sphere (Point (25.0, 0, -30.0), 10.0);
@@ -60,13 +65,46 @@ void init_scene (int MAX_DEPTH)
 	s2->material.kS.set (0.774,0.774,0.774);
 	s2->material.kT.set (0.0, 0.0, 0.0);
 	s2->material.n = 89.6;
-	s2->material.kR = 0;
+	s2->material.kR = 0.0;
 
 	scene->objects.push_back (s2);
 
+	// Sphere* s3 = new Sphere (Point (25.0, -17.0, -10.0), 3.0);
+
+	// s3->material.kA.set (1.0,1.0,1.0);
+	// s3->material.kD.set (0.12,0.12,0.12);
+	// s3->material.kS.set (0.0,0.0,0.0);
+	// s3->material.kT.set (0.9,0.9,0.9);
+	// s3->material.n = 89.6;
+	// s3->material.kR = 1.0;//.52;
+
+	// scene->objects.push_back (s3);
+
+	Cylinder* c = new Cylinder (Point (30.0, -19.0, -14.0), 10.0,3.0);
+
+	c->material.kA.set (0.2,0.2,0.2);
+	c->material.kD.set (0.4,0.4,0.4);
+	c->material.kS.set (0.4,0.4,0.4);
+	c->material.kT.set (0.0, 0.0, 0.0);
+	c->material.n = 89.6;
+	c->material.kR = 0.0;
+
+	scene->objects.push_back (c);
+
+	Cone* cone = new Cone (Point (10.0, -19.0, -30.0), 10.0,3.0);
+
+	cone->material.kA.set (0.2,0.2,0.2);
+	cone->material.kD.set (0.4,0.4,0.4);
+	cone->material.kS.set (0.4,0.4,0.4);
+	cone->material.kT.set (0.0, 0.0, 0.0);
+	cone->material.n = 89.6;
+	cone->material.kR = 0.0;
+
+	scene->objects.push_back (cone);
+
 	//left wall
 	{
-		Point ps1[] = { Point(-40.0, -20.0, -10.0), Point(-40.0, 30.0, -10.0),
+		Point ps1[] = { Point(-40.0, -20.0, 80.0), Point(-40.0, 30.0, 80.0),
 			Point(-40.0, 30.0, -80.0), Point(-40.0, -20.0, -80.0) };
 		Rect* r1 = new Rect (ps1);
 		r1->material.kA.set (0.35, 0.06, 0.02);
@@ -74,13 +112,15 @@ void init_scene (int MAX_DEPTH)
 		r1->material.kS.set (0.1, 0.1, 0.1);
 		r1->material.kT.set (0.0, 0.0, 0.0);
 		r1->material.n = 5.0;
-		r1->material.kR = 0;
+		r1->material.kR = 0.0;
+		Vector v(1,0,0);
+		r1->normal = v;
 
 		scene->objects.push_back (r1);
 	}
 	//right wall
 	{
-		Point ps2[] = { Point(40.0, -20.0, -10.0), Point(40.0, 30.0, -10.0),
+		Point ps2[] = { Point(40.0, -20.0, 80.0), Point(40.0, 30.0, 80.0),
 			Point(40.0, 30.0, -80.0), Point(40.0, -20.0, -80.0) };
 		Rect* r2 = new Rect (ps2);
 		r2->material.kA.set (0.06, 0.35, 0.02);
@@ -88,7 +128,9 @@ void init_scene (int MAX_DEPTH)
 		r2->material.kS.set (0.1, 0.1, 0.1);
 		r2->material.kT.set (0.0, 0.0, 0.0);
 		r2->material.n = 5.0;
-		r2->material.kR = 0;
+		r2->material.kR = 0.0;
+		Vector v(-1,0,0);
+		r2->normal = v;
 		
 		scene->objects.push_back (r2);
 	}
@@ -102,21 +144,72 @@ void init_scene (int MAX_DEPTH)
 		r3->material.kS.set (0.1, 0.1, 0.1);
 		r3->material.kT.set (0.0, 0.0, 0.0);
 		r3->material.n = 5.0;
-		r3->material.kR = 0;
+		r3->material.kR = 0.0;
+		Vector v(0,0,1);
+		r3->normal = v;
 		
 		scene->objects.push_back (r3);
 	}
-	//floor
-	Point ps[] = { Point(-40.0, -20.0, 80.0), Point(-40.0, -20.0, -80.0),
-		Point(40.0, -20.0, -80.0), Point(40.0, -20.0, 80.0) };
+	//front wall
+	{
+		Point ps4[] = { Point(-40.0, -20.0, 80.0), Point(-40.0, 30.0, 80.0),
+			Point(40.0, 30.0, 80.0), Point(40.0, -20.0, 80.0) };
+		Rect* r4 = new Rect (ps4);
+		r4->material.kA.set (0.02, 0.35, 0.35);
+		r4->material.kD.set (0.1, 0.8, 0.8);
+		r4->material.kS.set (0.1, 0.1, 0.1);
+		r4->material.kT.set (0.0, 0.0, 0.0);
+		r4->material.n = 5.0;
+		r4->material.kR = 0.0;
+		Vector v(0,0,-1);
+		r4->normal = v;
+		
+		scene->objects.push_back (r4);
+	}
+	{
+		//floor
+		Point ps[] = { Point(-40.0, -20.0, 80.0), Point(-40.0, -20.0, -80.0),
+			Point(40.0, -20.0, -80.0), Point(40.0, -20.0, 80.0) };
 
-	Rect* r = new Rect (ps);
-	r->material.kA.set (1.0,1.0,1.0);
-	r->material.kD.set (1.0,1.0,1.0);
-	r->material.kS.set (1.0,1.0,1.0);
-	r->material.kT.set (0.0, 0.0, 0.0);
-	r->material.n = 5.0;
-	scene->objects.push_back (r);
+		Floor* r = new Floor (ps,12,50);
+		r->material.kA.set (0.6,0.6,0.6);//(1.0,1.0,1.0);
+		r->material.kD.set (0.6,0.6,0.6);//(1.0,1.0,1.0);
+		r->material.kS.set (0.6,0.6,0.6);//(1.0,1.0,1.0);
+		r->material.kT.set (0.0, 0.0, 0.0);
+		r->material.kR = 0.0;
+		r->material.n = 5.0;
+
+		r->material2.kA.set (0.0, 0.0, 0.0);
+		r->material2.kD.set (0.0, 0.0, 0.0);
+		r->material2.kS.set (0.1, 0.1, 0.1);
+		r->material2.kT.set (0.0, 0.0, 0.0);
+		r->material2.n = 5.0;
+		r->material2.kR = 0.0;
+			Vector v(0,1,0);
+			r->normal = v;
+		scene->objects.push_back (r);
+	}
+
+	{
+		//ceiling
+		Point ps[] = { Point(-40.0, 30.0, 80.0), Point(-40.0, 30.0, -80.0),
+			Point(40.0, 30.0, -80.0), Point(40.0, 30.0, 80.0) };
+
+		Floor* r = new Floor (ps,12,40);
+		r->material.kA.set (1.0,1.0,1.0);
+		r->material.kD.set (1.0,1.0,1.0);
+		r->material.kS.set (1.0,1.0,1.0);
+		r->material.kT.set (0.0, 0.0, 0.0);
+		r->material.n = 5.0;
+		r->material2.kA.set (0.0, 0.0, 0.0);
+		r->material2.kD.set (0.0, 0.0, 0.0);
+		r->material2.kS.set (0.1, 0.1, 0.1);
+		r->material2.kT.set (0.0, 0.0, 0.0);
+		r->material2.n = 5.0;
+			Vector v(0,-1,0);
+			r->normal = v;
+		scene->objects.push_back (r);
+	}
 }
 
 /* Display function */
@@ -129,33 +222,43 @@ void display () {
 		{
 			for (int i=0;i<WIDTH;i++)
 			{
-				Point p1 (canVol.uMin+stepx*i, canVol.vMin+stepy*j, vrc.vrp.z);
-				Point p2 (canVol.uMin+stepx*(i+1), canVol.vMin+stepy*j, vrc.vrp.z);
-				Point p3 (canVol.uMin+stepx*i, canVol.vMin+stepy*(j+1), vrc.vrp.z);
-				Point p4 (canVol.uMin+stepx*(i+1), canVol.vMin+stepy*(j+1), vrc.vrp.z);
 				
-				Ray r1 (vrc.prp, p1-vrc.prp);
-				Intensity c1 = scene->raytrace (r1, 0);
+				double d;
+				bool deb = i==650 && j==517;
+				Intensity c;
+				if(antialiasing)
+				{
+					Point p1 (canVol.uMin+stepx*(i-0.5), canVol.vMin+stepy*(j-0.5), vrc.vrp.z);
+					Point p2 (canVol.uMin+stepx*(i-0.5), canVol.vMin+stepy*(j+0.5), vrc.vrp.z);
+					Point p3 (canVol.uMin+stepx*(i+0.5), canVol.vMin+stepy*(j+0.5), vrc.vrp.z);
+					Point p4 (canVol.uMin+stepx*(i+0.5), canVol.vMin+stepy*(j-0.5), vrc.vrp.z);
+					Ray r1 (vrc.prp, p1-vrc.prp, 1.0, deb);
+					c = scene->raytrace (r1, 0);
 
-				// Ray r2 (vrc.prp, p2-vrc.prp);
-				// Intensity c2 = scene->raytrace (r2, 0);
+					Ray r2 (vrc.prp, p2-vrc.prp, 1.0);
+					Intensity c2 = scene->raytrace (r2, 0);
 
-				// Ray r3 (vrc.prp, p3-vrc.prp);
-				// Intensity c3 = scene->raytrace (r3, 0);
+					Ray r3 (vrc.prp, p3-vrc.prp, 1.0);
+					Intensity c3 = scene->raytrace (r3, 0);
 
-				// Ray r4 (vrc.prp, p4-vrc.prp);
-				// Intensity c4 = scene->raytrace (r4, 0);
+					Ray r4 (vrc.prp, p4-vrc.prp, 1.0);
+					Intensity c4 = scene->raytrace (r4, 0);
 
-				// Intensity c = average (c1, c2, c3, c4);
-				// glColor3f (c.r, c.g, c.b);
-				glColor3f(c1.r, c1.g, c1.b);
-				glVertex2i (i, j);
+					c = average (c, c2, c3, c4);
+				} else 
+				{
+					Point p (canVol.uMin+stepx*(i), canVol.vMin+stepy*(j), vrc.vrp.z);
+					Ray r (vrc.prp, p-vrc.prp, 1.0, deb);
+					c = scene->raytrace (r, 0);
+				}
+				glColor3f (c.r, c.g, c.b);
+				glVertex2f (i, j);
 			}
 		}
 	glEnd ();
-	// cout<<"done"<<endl;
+	cout<<"done"<<endl;
 	// delete[] scene->objects [0];
-	exit (EXIT_SUCCESS);
+	// exit (EXIT_SUCCESS);
 
 	glFlush ();
 	/* swap buffers */
@@ -190,6 +293,10 @@ void reshape (int w, int h) {
 }
 
 void idle () {}
+void mouse (int button, int state, int x, int y)
+{
+	cout<<"Mouse "<<x<<","<<y<<endl;
+}
 
 void init (int argc, char** argv)
 {
@@ -219,20 +326,25 @@ void init (int argc, char** argv)
 
 	/* sets the reshape callback for the current window */
 	glutReshapeFunc(reshape);
-
+	glutMouseFunc(mouse);
 	/* enters the GLUT event processing loop */
 	glutMainLoop();
 }
 
 int main (int argc, char** argv) {
-	vrc.prp = Point (0,0,10);
+	vrc.prp = Point (0,0,80);
 	vrc.vrp = Point (0,0,-10);
 	vrc.vpn = Point (0,0,1);
 	vrc.vup = Point (0,1,0);
 
 	int MAX_DEPTH = 0;
 	if (argc > 1)
+	{
 		MAX_DEPTH = atoi (argv[1]);
+
+		if(argc>2)
+			antialiasing = strcmp (argv[2], "-aa") == 0;
+	}
 
 	canVol.uMin = canVol.vMin = -40;
 	canVol.uMax = canVol.vMax = 40;

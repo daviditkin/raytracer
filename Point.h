@@ -24,6 +24,12 @@ class Point
 		double w;
 		Point () : x (0), y(0), z(0), w(1) {}
 		Point (double _x, double _y, double _z) : x (_x), y(_y), z(_z), w(1) {}
+		void set (double _x, double _y, double _z)
+		{
+			x = _x;
+			y = _y;
+			z = _z;
+		}
 
 		// Overload equality operator
 		bool operator== (const Point& p)

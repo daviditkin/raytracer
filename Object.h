@@ -11,6 +11,7 @@ class Object
 		Material material;
 		virtual bool intersect (const Ray& ray, double& t) = 0;
 		virtual Vector normal_in (const Point& p) = 0;
+		virtual Material get_material (const Point& p) = 0;
 };
 
 #endif

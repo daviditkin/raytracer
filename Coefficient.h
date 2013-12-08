@@ -1,5 +1,7 @@
 #ifndef COEFFICIENT_H
 #define COEFFICIENT_H
+#include <ostream>
+using namespace std;
 
 class Coefficient
 {
@@ -22,6 +24,18 @@ class Coefficient
 		Coefficient operator+ (const Coefficient& k)
 		{
 			return Coefficient (r+k.r, g+k.g, b+k.b);
+		}
+
+		bool operator> (const double& k)
+		{
+			return r>k && g>k && b>k;
+		}
+		
+		// Overload << operator, so that we can print a Point easily
+		friend ostream& operator<< (ostream& os, const Coefficient i)
+		{
+			os << "(" << i.r << ", " << i.g << ", " << i.b << ")";
+			return os;
 		}
 };
 

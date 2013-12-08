@@ -23,7 +23,6 @@ class Vector
 		void normalize ();
 
 		// Overload the * operator as the CROSS PRODUCT
-		Vector operator^ (const Vector& V);
 		double operator* (const Vector& V);
 		Vector operator+ (const Vector& V);
 		Vector operator- (const Vector& V);
@@ -44,9 +43,12 @@ class Vector
 };
 
 // Overload the * operator for multiplication with a scalar
+Vector operator^ (const Vector& v1,const Vector& v2);
 Vector operator* (const Vector& v, double a);
 Vector operator* (double a, const Vector& v);
 Vector operator/ (const Vector& v, double a);
 Vector operator- (const Point& p2, const Point& p1);
+Point operator+ (const Vector& v, const Point& p);
+Point operator+ (const Point& p, const Vector& v);
 
 #endif

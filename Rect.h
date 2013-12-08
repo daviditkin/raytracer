@@ -16,7 +16,7 @@ class Rect : public Object
 			points.push_back (p2);
 			points.push_back (p3);
 			points.push_back (p4);
-			calculate_normal ();
+			// calculate_normal ();
 			calculate_bounds ();
 		}
 		Rect (Point ps[])
@@ -25,11 +25,12 @@ class Rect : public Object
 			points.push_back (ps[1]);
 			points.push_back (ps[2]);
 			points.push_back (ps[3]);
-			calculate_normal ();
+			// calculate_normal ();
 			calculate_bounds ();
 		}
 		bool intersect (const Ray& ray, double& t);
 		Vector normal_in (const Point& p);
+		virtual Material get_material (const Point& p) { return material; }
 	private:
 		void calculate_normal ();
 		void calculate_bounds ();

@@ -5,6 +5,7 @@
 using namespace std;
 #include "Object.h"
 #include "Light.h"
+#define EPSILON 0.00001
 
 class Scene
 {
@@ -18,12 +19,13 @@ class Scene
 		void set_ambient (Intensity i);
 		void set_pls (Point p, Intensity i);
 		Intensity raytrace (Ray& ray, int depth);
-		Intensity shade (int obj_index, Ray& ray, Intersection& intersection, int depth);
+		Intensity shade (Ray& ray, Intersection& intersection, int depth);
 		Matrix intersection_matrix (const Ray& ray);
 
-		Intensity lighting_model (int obj, double costTheta, double cosAlpha);
+		Intensity lighting_model (Intersection& intersection, double costTheta, double cosAlpha,bool debug);
 
 		Vector reflect (Vector& v, Vector& normal);
+		Vector refract (Vector& v, Vector& normal, double kN);
 
 };
 

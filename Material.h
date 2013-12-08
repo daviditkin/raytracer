@@ -11,7 +11,7 @@ class Material
 		Coefficient kT;
 
 		// Refractive index
-		float kR;
+		double kR;
 		int n;
 };
 

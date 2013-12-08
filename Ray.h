@@ -9,9 +9,11 @@ class Ray
 	public:
 		Point origin;
 		Vector direction;
+		bool debug;
 		//Refractive index of material it is travelling in
-		float kR;
-		Ray (Point& o, Vector dir) : origin (o), direction (dir) { direction.normalize (); }
+		double kR;
+		Ray (Point& o, Vector dir, double kr = 1.0, bool d = false)
+		 : origin (o), direction (dir), debug (d), kR (kr) { direction.normalize (); }
 };
 
 #endif

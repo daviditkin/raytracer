@@ -18,13 +18,13 @@ void Vector::normalize ()
 }
 
 // Vector CROSS PRODUCT
-Vector Vector::operator^ (const Vector& v2)
+Vector operator^ (const Vector& v1,const Vector& v2)
 {
-	double v[3];
-	v [0] = y*v2.z - z*v2.y;
-	v [1] = z * v2.x - x * v2.z;
-	v [2] = x * v2.y - y * v2.x;
-	return Vector (v[0], v[1], v[2]);
+	double x1 = v1.y * v2.z - v1.z * v2.y;
+	double y1 = v1.z * v2.x - v1.x * v2.z;
+	double z1 = v2.x * v2.y - v1.y * v2.x;
+	
+	return Vector (x1, y1, z1);
 }
 
 // Dot product
@@ -115,4 +115,14 @@ Vector operator- (const Point& p2, const Point& p1)
 {
 	// we have to normalize the points to calculate the difference
 	return Vector (p1, p2);
+}
+
+Point operator+ (const Vector& v, const Point& p)
+{
+	return Point (p.x+v.x, p.y+v.y, p.z+v.z);
+}
+
+Point operator+ (const Point& p, const Vector& v)
+{
+	return v+p;
 }

@@ -14,8 +14,11 @@ bool Sphere::intersect (const Ray& ray, double& t)
 		return false;
 
 	double t1 = -b - sqrt (delta2);
-	if (t1<0)
+	double epsilon = 0.00000001;
+	if (t1<=epsilon)
 		return false;
+	if(ray.debug)
+		cout<<"t "<<t1<<endl;
 	t = t1;
 	return true;
 
@@ -66,4 +69,9 @@ Vector Sphere::normal_in (const Point& p)
 	// Vector v = p-center;
 	v.normalize ();
 	return v;
+}
+
+Material Sphere::get_material (const Point& p)
+{
+	return material;
 }
