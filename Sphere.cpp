@@ -2,23 +2,27 @@
 #include <cmath>
 #include <iostream>
 using namespace std;
-#include "Transformation.h"
 
+// Calculate intersection by translating the ray origin so that the center
+// of the sphere is at the origin, so that calculations are simpler
 bool Sphere::intersect (const Ray& ray, double& t)
 {
 	Point p (ray.origin.x - center.x, ray.origin.y - center.y, ray.origin.z - center.z);
 	double b = p.x*ray.direction.x + p.y*ray.direction.y + p.z*ray.direction.z;
 	double delta2 = b*b + radius*radius - p.x*p.x-p.y*p.y-p.z*p.z;
 
-	if (delta2 < 0)
+	double epsilon = 0.00000001;
+	if (delta2 < epsilon)
 		return false;
 
 	double t1 = -b - sqrt (delta2);
-	double epsilon = 0.00000001;
+
 	if (t1<=epsilon)
 		return false;
+
 	if(ray.debug)
 		cout<<"t "<<t1<<endl;
+	
 	t = t1;
 	return true;
 
@@ -63,10 +67,10 @@ bool Sphere::intersect (const Ray& ray, double& t)
 	return true;*/
 }
 
+// Calculate sphere normal
 Vector Sphere::normal_in (const Point& p)
 {
 	Vector v ((p.x-center.x)/radius, (p.y-center.y)/radius, (p.z-center.z)/radius);
-	// Vector v = p-center;
 	v.normalize ();
 	return v;
 }

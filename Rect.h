@@ -4,10 +4,13 @@
 #include <vector>
 using namespace std;
 
+// A flat rectangle, colored with the same color
 class Rect : public Object
 {
 	public:
+		// 4 vertices of the rectangle
 		vector<Point> points;
+		// normal to the surface
 		Vector normal;
 		double xMax, xMin, yMax, yMin, zMax, zMin;
 		Rect (const Point& p1, const Point& p2, const Point& p3, const Point& p4)

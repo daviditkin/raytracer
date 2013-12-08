@@ -34,6 +34,7 @@ double stepx = 0;
 double stepy = 0;
 bool antialiasing = false;
 
+// average intensities from the antialiasing rays
 Intensity average (const Intensity& c1, const Intensity& c2, const Intensity& c3, const Intensity& c4)
 {
 	float r = (c1.r+c2.r+c3.r+c4.r)/4;
@@ -42,9 +43,10 @@ Intensity average (const Intensity& c1, const Intensity& c2, const Intensity& c3
 	return Intensity (r, g, b);
 }
 
+// create objects in the scene
 void init_scene (int MAX_DEPTH)
 {
-	scene = new Scene (MAX_DEPTH, vrc.prp);
+	scene = new Scene (MAX_DEPTH);
 	scene->set_ambient (Intensity (0.5,0.5,0.5));//(1.0, 1.0, 1.0));
 	scene->set_pls (Point (0, 29, 5), Intensity (0.7,0.7,0.7));
 
@@ -68,17 +70,6 @@ void init_scene (int MAX_DEPTH)
 	s2->material.kR = 0.0;
 
 	scene->objects.push_back (s2);
-
-	// Sphere* s3 = new Sphere (Point (25.0, -17.0, -10.0), 3.0);
-
-	// s3->material.kA.set (1.0,1.0,1.0);
-	// s3->material.kD.set (0.12,0.12,0.12);
-	// s3->material.kS.set (0.0,0.0,0.0);
-	// s3->material.kT.set (0.9,0.9,0.9);
-	// s3->material.n = 89.6;
-	// s3->material.kR = 1.0;//.52;
-
-	// scene->objects.push_back (s3);
 
 	Cylinder* c = new Cylinder (Point (30.0, -19.0, -14.0), 10.0,3.0);
 
@@ -226,12 +217,15 @@ void display () {
 				double d;
 				bool deb = i==650 && j==517;
 				Intensity c;
+				// Use antialiasing with 4 rays
 				if(antialiasing)
 				{
+					// Pixels of the window for the 4 rays
 					Point p1 (canVol.uMin+stepx*(i-0.5), canVol.vMin+stepy*(j-0.5), vrc.vrp.z);
 					Point p2 (canVol.uMin+stepx*(i-0.5), canVol.vMin+stepy*(j+0.5), vrc.vrp.z);
 					Point p3 (canVol.uMin+stepx*(i+0.5), canVol.vMin+stepy*(j+0.5), vrc.vrp.z);
 					Point p4 (canVol.uMin+stepx*(i+0.5), canVol.vMin+stepy*(j-0.5), vrc.vrp.z);
+
 					Ray r1 (vrc.prp, p1-vrc.prp, 1.0, deb);
 					c = scene->raytrace (r1, 0);
 
@@ -244,21 +238,23 @@ void display () {
 					Ray r4 (vrc.prp, p4-vrc.prp, 1.0);
 					Intensity c4 = scene->raytrace (r4, 0);
 
+					// average the 4 intensities
 					c = average (c, c2, c3, c4);
 				} else 
 				{
+					// no antialiasing
 					Point p (canVol.uMin+stepx*(i), canVol.vMin+stepy*(j), vrc.vrp.z);
 					Ray r (vrc.prp, p-vrc.prp, 1.0, deb);
+
 					c = scene->raytrace (r, 0);
 				}
+
 				glColor3f (c.r, c.g, c.b);
 				glVertex2f (i, j);
 			}
 		}
 	glEnd ();
 	cout<<"done"<<endl;
-	// delete[] scene->objects [0];
-	// exit (EXIT_SUCCESS);
 
 	glFlush ();
 	/* swap buffers */
@@ -293,10 +289,6 @@ void reshape (int w, int h) {
 }
 
 void idle () {}
-void mouse (int button, int state, int x, int y)
-{
-	cout<<"Mouse "<<x<<","<<y<<endl;
-}
 
 void init (int argc, char** argv)
 {
@@ -322,11 +314,9 @@ void init (int argc, char** argv)
 
 	/* assign the idle function */
 	// glutIdleFunc(idle);
-	// glutIdleFunc(idle);
 
 	/* sets the reshape callback for the current window */
 	glutReshapeFunc(reshape);
-	glutMouseFunc(mouse);
 	/* enters the GLUT event processing loop */
 	glutMainLoop();
 }
@@ -340,8 +330,10 @@ int main (int argc, char** argv) {
 	int MAX_DEPTH = 0;
 	if (argc > 1)
 	{
+		//maximum depth argument
 		MAX_DEPTH = atoi (argv[1]);
 
+		// antialiasing argument
 		if(argc>2)
 			antialiasing = strcmp (argv[2], "-aa") == 0;
 	}

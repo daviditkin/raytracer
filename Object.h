@@ -1,10 +1,11 @@
 #ifndef OBJECT_H
 #define OBJECT_H
-#include "Matrix.h"
 #include "Ray.h"
 #include "Intersection.h"
 #include "Material.h"
 
+// abstract class representing an object in the scene
+// Sphere, Rect, Floor, Cone and Cylinder are all subclasses of this
 class Object
 {
 	public:

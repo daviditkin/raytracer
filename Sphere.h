@@ -2,6 +2,7 @@
 #define SPHERE_H
 #include "Object.h"
 
+// Sphere object
 class Sphere : public Object
 {
 	public:

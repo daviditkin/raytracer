@@ -4,6 +4,9 @@
 using namespace std;
 #include "Vector.h"
 
+// A single ray with an origin a direction
+// and the refractive coefficient of the material
+// it is travelling in
 class Ray
 {
 	public:

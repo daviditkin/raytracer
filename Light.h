@@ -3,6 +3,7 @@
 #include "Point.h"
 #include "Intensity.h"
 
+// A light source, with a position and intensity
 class Light
 {
 	public:
@@ -10,6 +11,7 @@ class Light
 		Intensity intensity;
 };
 
+// Overload operators
 Intensity operator* (const Light& l, const Coefficient& k);
 
 Intensity operator* (const Coefficient& k, const Light& l);

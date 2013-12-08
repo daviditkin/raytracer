@@ -1,15 +1,14 @@
 #include "Scene.h"
-#include "Transformation.h"
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 Intensity Scene::raytrace (Ray& ray, int depth)
 {
 	int obj_ind = -1;
 	double closest = -1;
-	// if(ray.debug)
-	// 	cout<<"RT: "<<depth<<" Ray from "<<ray.origin<<" direction "<<ray.direction<<endl;
 
+	// find closest intersection among all objects
 	double t = -1;
 	for (int i=0;i<objects.size ();i++)
 	{
@@ -22,6 +21,7 @@ Intensity Scene::raytrace (Ray& ray, int depth)
 	}
 
 	Intensity retVal;
+		// if there is an intersection..
 	if (obj_ind >=0) {
 		Intersection intersection;
 		intersection.point.x = ray.origin.x + closest*ray.direction.x;
@@ -29,25 +29,26 @@ Intensity Scene::raytrace (Ray& ray, int depth)
 		intersection.point.z = ray.origin.z + closest*ray.direction.z;
 		intersection.normal = objects[obj_ind]->normal_in (intersection.point);
 		intersection.material = objects[obj_ind]->get_material (intersection.point);
-		// if(obj_ind==0)
-			// cout<<"int "<<intersection.point<<endl;
-			// return Intensity(1.0,1.0,1.0);
+		// ...get the light intensity in the intersection
 		retVal = shade (ray, intersection, depth);
-	}/*else if(ray.debug)
-		cout<<"RT: "<<depth<<" Not hitting anything"<<endl;*/
+	}
 	
 	return retVal;
 }
 
 Intensity Scene::shade (Ray& ray, Intersection& intersection, int depth)
 {
+	// start from the ambient light
 	Intensity retVal = iA*intersection.material.kA;
 
 	if(ray.debug)
 		cout<<"SH: "<<depth<<" MAX "<<MAX_DEPTH<<endl;
+	// if we exceeded the maximum depth of the ray tree
+	// return ambient light
 	if (depth > MAX_DEPTH)
 		return retVal;
 
+	// calculate L,R,V vectors
 	Vector L = iP.position - intersection.point;
 	L.normalize ();
 	Vector R = reflect (L, intersection.normal);
@@ -57,6 +58,8 @@ Intensity Scene::shade (Ray& ray, Intersection& intersection, int depth)
 	if(ray.debug)
 		cout<<"SH: "<<depth<<" L "<<L<<" R "<<R<<" V "<<V<<endl;
 		
+	// create shadow ray and calculate the shadow factor
+	// from the transparency value of the objects it intersects
 	Ray shadow (intersection.point, L, ray.debug);
 	double dist = L.length ();
 	double t;
@@ -79,11 +82,13 @@ Intensity Scene::shade (Ray& ray, Intersection& intersection, int depth)
 	if(ray.debug)
 		cout<<"SH: "<<depth<<" shadow factor "<<shadow_factor<<endl;
 
+	// calculate reflected ray and raytrace
 	Ray reflected (intersection.point, R, ray.debug);
 	Intensity ref = raytrace (reflected, depth+1);
 	ref.clamp ();
 
 	Intensity tra (0.0,0.0,0.0);
+	// raytrace refracted ray if the material is transparent
 	if (intersection.material.kT >0.0 && intersection.material.kR > 0.0 && ray.kR > 0.0)
 	{
 		Vector T = refract (V, intersection.normal, intersection.material.kR/ray.kR);
@@ -96,6 +101,8 @@ Intensity Scene::shade (Ray& ray, Intersection& intersection, int depth)
 
 	if(ray.debug)
 		cout<<"SH: "<<depth<<" material "<<intersection.material.kS<<endl;
+
+	// apply the lighting model and reflected/refracted light
 	retVal = retVal + shadow_factor*(lighting_model (intersection, abs(intersection.normal*L), abs(R*V), ray.debug)
 					+ ref*intersection.material.kS*0.7 + tra*intersection.material.kT);
 	
@@ -105,6 +112,7 @@ Intensity Scene::shade (Ray& ray, Intersection& intersection, int depth)
 	return retVal;
 }
 
+// get the intensity from the lighting model (diffues and specular components)
 Intensity Scene::lighting_model (Intersection& intersection, double costTheta, double cosAlpha, bool debug)
 {
 	double cosAlphaN = pow (cosAlpha, intersection.material.n);
@@ -117,29 +125,17 @@ Intensity Scene::lighting_model (Intersection& intersection, double costTheta, d
 	return i+specular;
 }
 
+// calculate the reflected vector of l with respect to the normal
 Vector Scene::reflect (Vector& l, Vector& normal)
 {
 	Vector retVal = (2*(l*normal)*normal - l);
 	retVal.normalize ();
-
-	// Vector vPrime = v / (v*normal);
-	// Vector retVal = vPrime + 2*normal;
-	// retVal.normalize ();
 	return retVal;
 }
 
+// calculate the refracted vector of l with respect to the normal
 Vector Scene::refract (Vector& v, Vector& n, double kN)
 {
-	// Vector vPrime = v / (v*normal);
-	// double kF = kN*vPrime.length ();
-	// kF *= kF;
-	// double len = (normal+vPrime).length ();
-	// kF -= len*len;
-	// kF = sqrt (kF);
-	// Vector retVal = kF*(normal+vPrime) - normal;
-	// retVal.normalize ();
-	// return retVal;
-
 	double cos1 = n*v;
 	double cos2 = sqrt(1- kN*kN*(1-cos1*cos1));
 	Vector r = (-kN)*v + (kN*cos1+cos2)*n;

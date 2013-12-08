@@ -3,6 +3,7 @@
 #include <ostream>
 using namespace std;
 
+// Represents coefficients like Kt, Ks, Kd...
 class Coefficient
 {
 	public:
@@ -17,6 +18,9 @@ class Coefficient
 			g = _g;
 			b = _b;
 		}
+
+		// Overload operators so that we don't have to write
+		// each statement, addition, etc 3 times because of the 3 components
 		Coefficient operator* (const Coefficient& k)
 		{
 			return Coefficient (r*k.r, g*k.g, b*k.b);

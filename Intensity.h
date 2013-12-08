@@ -4,6 +4,7 @@
 #include <ostream>
 using namespace std;
 
+// Represents a light intensity, with rgb components
 class Intensity
 {
 	public:
@@ -18,6 +19,7 @@ class Intensity
 			return Intensity (r+i.r, g+i.g, b+i.b);
 		}
 
+		// Intensity values can not go above 1.0 or below 0.0
 		void clamp ()
 		{
 			float eps = 0.0000001f;
@@ -37,6 +39,7 @@ class Intensity
 		}
 };
 
+//Overload operators to do operations on intensities more easily
 Intensity operator* (const Intensity& i, const Coefficient& k);
 
 Intensity operator* (const Coefficient& k, const Intensity& i);

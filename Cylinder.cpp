@@ -1,30 +1,49 @@
 #include "Cylinder.h"
 #include <cmath>
 
+// Find intersection with infinite cylinder with center in the origin
+// to do that, translate the ray origin so that the center of the bottom base
+// is at the origin, then calculate intersection with the canonical infinite cylinder
+// and check if the ray intersects the lateral surface of the cylinder within our
+// bases, if not check if it's intersecting the bases and if not, it's not intersecting
+// our actual cylinder
 bool Cylinder::intersect (const Ray& ray, double& t)
 {
+	// translate the ray origin
 	Point p0 (ray.origin.x-center.x, ray.origin.y-center.y, ray.origin.z-center.z);
+
+	// coefficients for the intersection equation
+	// got them mathematically intersecting the line equation with the cylinder equation
 	double a = ray.direction.x*ray.direction.x+ray.direction.z*ray.direction.z;
 	double b = ray.direction.x*p0.x +ray.direction.z*p0.z;
 	double c = p0.x*p0.x+p0.z*p0.z-radius*radius;
 
 	double delta = b*b - a*c;
-	if (delta < 0)
+
+	//use epsilon because of computation errors between doubles
+	double epsilon = 0.00000001;
+
+	// delta < 0 means no intersections
+	if (delta < epsilon)
 		return false;
 
+	// nearest intersection
 	t = (-b - sqrt (delta))/a;
-	double epsilon = 0.00000001;
+
+	// t<0 means the intersection is behind the ray origin
+	// which we don't want
 	if (t<=epsilon)
 		return false;
 
 	
 	double y = p0.y+t*ray.direction.y;
 
+	// check if we intersect one of the bases
 	if (y > height+epsilon || y < -epsilon) {
 		double dist;
-		bool b1 = intersect_base (ray, Vector(0,1,0), center2, dist);
+		bool b1 = intersect_base (ray, center2, dist);
 		if(b1) t=dist;
-		bool b2 = intersect_base (ray, Vector(0,-1,0), center, dist);
+		bool b2 = intersect_base (ray, center, dist);
 		if(b2 && dist>epsilon && t>=dist)
 			t=dist;
 		return b1 || b2;
@@ -34,9 +53,12 @@ bool Cylinder::intersect (const Ray& ray, double& t)
 
 }
 
-bool Cylinder::intersect_base (const Ray& ray, Vector normal, const Point& c, double& t)
+// Calculate intersection with the base having center c
+// We do this by calculating the intersection with the plane
+// and then checking if the intersection is within the base circle
+bool Cylinder::intersect_base (const Ray& ray, const Point& c, double& t)
 {
-
+	Vector normal = normal_in (c);
 	Point p0 (ray.origin.x-center.x, ray.origin.y-center.y, ray.origin.z-center.z);
 	double A = normal[0];
 	double B = normal[1];
@@ -63,8 +85,12 @@ bool Cylinder::intersect_base (const Ray& ray, Vector normal, const Point& c, do
 	return true;
 }
 
+// Calculate the normal in a point on the surface
+// it is a vertical vector in the bases and a vector
+// having the direction of the vector from the axis to the point
 Vector Cylinder::normal_in (const Point& p)
 {
+	// Point is on one of the bases
 	if (p.x<center.x+radius && p.x>center.x-radius && p.z<center.z+radius && p.z>center.z-radius)
 	{
 		double epsilon = 0.00000001;
@@ -75,10 +101,10 @@ Vector Cylinder::normal_in (const Point& p)
 			return Vector (0,-1,0);
 		}
 	}
-	{
-	 	Point c0 (center.x, p.y, center.z);
-	 	Vector v = p-c0;
-	 	v.normalize ();
-	 	return v;
-	}
+
+	// Point is on lateral surface
+ 	Point c0 (center.x, p.y, center.z);
+ 	Vector v = p-c0;
+ 	v.normalize ();
+ 	return v;
 }

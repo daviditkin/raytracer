@@ -1,5 +1,9 @@
 #include "Rect.h"
 
+// calculate the intersection by calculating
+// the intersection of the ray with the surface
+// and then checking whether the intersection is
+// within the rectangle or not
 bool Rect::intersect (const Ray& ray, double& t)
 {
 	double A = normal[0];
@@ -20,6 +24,7 @@ bool Rect::intersect (const Ray& ray, double& t)
 	p.x = ray.origin.x+dist*ray.direction[0];
 	p.y = ray.origin.y+dist*ray.direction[1];
 	p.z = ray.origin.z+dist*ray.direction[2];
+	// check if the intersection is acceptable or not
 	if (p.x >= xMax+epsilon || p.x <= xMin-epsilon || p.y >= yMax+epsilon || 
 		p.y <= yMin-epsilon || p.z >= zMax+epsilon || p.z <= zMin-epsilon)
 		return false;
@@ -28,6 +33,7 @@ bool Rect::intersect (const Ray& ray, double& t)
 	return true;
 }
 
+// the normal is always the same
 Vector Rect::normal_in (const Point& p)
 {
 	return normal;
@@ -37,12 +43,12 @@ void Rect::calculate_normal ()
 {
 	Vector v1 = points[1] - points[0];
 	Vector v2 = points[2] - points[1];
-	cout<<"v1 "<<v1<<" v2 "<<v2<<endl;
 
 	normal = (v2^v1);
 	normal.normalize ();
 }
 
+// calculates the rectangle bounds
 void Rect::calculate_bounds ()
 {
 	xMin = xMax = points[0].x;
@@ -66,5 +72,4 @@ void Rect::calculate_bounds ()
 		if (points[i].z < zMin)
 			zMin = points[i].z;
 	}
-	cout<<"bounds "<<xMin<<","<<xMax<<","<<yMin<<","<<yMax<<","<<zMin<<","<<zMax<<endl;
 }

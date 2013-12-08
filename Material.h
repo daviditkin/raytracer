@@ -2,6 +2,7 @@
 #define MATERIAL_H
 #include "Coefficient.h"
 
+// A material for objects, with its coefficients for lights
 class Material
 {
 	public:
